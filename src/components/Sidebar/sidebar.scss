@@ -1,0 +1,125 @@
+.sidebar {
+  background-color: #fff;
+  width: 13em;
+  height: 100vh;
+  border-radius: 15px;
+  border: 4px double #E6EBF1;
+  padding: 1em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .5s;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__circles {
+    display: flex;
+    gap: 0.3em;
+    margin-bottom: 2em;
+
+    span {
+      border-radius: 50%;
+      width: 0.5em;
+      height: 0.5em;
+  
+      &:nth-of-type(1) {
+        background-color: red;
+      }
+  
+      &:nth-of-type(2) {
+        background-color: orange;
+      }
+  
+      &:nth-of-type(3) {
+        background-color: green;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 2em;
+    position: relative;
+
+    &-image {
+      width: 2.2em;
+    }
+
+    &-angle {
+      cursor: pointer;
+      position: absolute;
+      border-radius: 50%;
+      right: -2em;
+      padding: 1em;
+      width: 1em;
+      height: 1em;
+      border: unset;
+      background-color: #E2E8F0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #cdd2da;
+      }
+    }
+
+    &-name {
+      color: #0924AA;
+      font-weight: bold;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+
+    &-link {
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1em max-content;
+      align-items: center;
+      column-gap: 1em;
+      padding: 0.5em;
+      
+      &:not(.active) {
+        opacity: 0.7;
+      }
+
+      &:hover {
+        background-color: #F1F5F9;
+        border-radius: 10px;
+        opacity: 1;
+        color: #04152C;
+      }
+
+      &.active {
+        color: #0925C4;
+        background-color: #F0F2FF;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &:not(.opened) {
+    width: 3.7em;
+    padding: 1em 0.5em;
+
+    .sidebar__logo-angle {
+      background-color: #fff;
+      left: 4em;
+
+      &:hover {
+        background-color: #f0efef;
+      }
+    }
+  }
+}
